@@ -5,12 +5,11 @@ export default function Home({ posts }) {
   return (
     <div>
       <h1 className="mt-24 mb-12 font-bold text-3xl">Latest Posts</h1>
-      {posts.map((post) => (
-        <PostCard
-          key={post.slug}
+      {posts.map((post,id) => (
+        <PostCard key={id}
           title={post.data.title}
-          date={post.data.date}
-          description={post.data.description}
+          publishedOn={post.data.publishedOn}
+          abstract={post.data.abstract}
           slug={post.slug}
         />
       ))}

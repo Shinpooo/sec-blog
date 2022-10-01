@@ -1,7 +1,11 @@
+import Link from "next/link";
+
 function Header() {
   return (
     <div className="flex justify-between my-8 items-center">
-      <h1 className="font-medium text-xl">Next.js Blog</h1>
+    <Link href="/">
+      <a className="font-medium text-xl">Pooshin</a>
+    </Link>
       <div>
         <a
           href="https://twitter.com/MarkSShenouda"
