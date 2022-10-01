@@ -7,4 +7,4 @@ function ArticleLayout({ frontMatter, children }) {
             {children}
         </>
     );
-}x
+}
