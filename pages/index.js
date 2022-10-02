@@ -18,7 +18,8 @@ export default function Home({ posts }) {
 }
 
 export const getStaticProps = () => {
-  const posts = getPosts();
+  let posts = getPosts();
+  posts = posts.filter(post => post.data.isPublished);
 
   return {
     props: {

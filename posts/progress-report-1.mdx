@@ -1,5 +1,5 @@
 ---
-title: "Progress report #1"
+title: "Progress report #1 - Sep 2022"
 seoTitle: How I got into smart contract security in less than 48 hours
 abstract: An overview of my first steps in the world of smart contracts security
 isPublished: true
@@ -10,192 +10,81 @@ categories: [Progress Report]
 
 # Introduction
 
-The progress reports are a serie of articles where I will share my journey into the world of smart contracts security.
+The progress reports are a series of articles where I will share my journey into the world of smart contract security.
+This progress report describes my journey from Sep 23, 2022 to Oct 2, 2022.
+
 
 
 # Who am I?
 
-Since this is the first report, I think a bit of context is needed.  
-Here is a quick intro, I'm Pooshin, I'm a self-taught smart contract and I got into crypto in mid-2021. I learned a ton of stuff about web3, created some dApps & I worked as a fullstack web3 developer for many little projects. 
+Since this is the first report, I think a bit of context is needed.
 
-
-# What I learned?
+Here is a quick intro, I'm Pooshin, I'm an electrical eng & a self-taught smart contract dev. Got into crypto in mid-2021.<br/>
+I learned a ton of stuff about web3, created some dApps & I worked as a full-stack web3 developer for many little projects. 
+Smart contract & EVM are the parts I appreciated working on the most during my web3 journey. So I decided to get into it fully
 
 <StaticTweet id="1573276957986488321" />
 
-Here’s an overview of Markdown syntax that you can use anywhere on GitHub.com or in your own text files.
+# What did I work on?
 
-## Headers
+## Slither
 
-```
-# This is a h1 tag
+I watched the security video of Patrick Collins, which gave me a lot of resources to explore!
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TmZ8gH-toX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## This is a h2 tag
+Learned about static analysis with Slither & applied it to some of my previous projects.
 
-#### This is a h4 tag
-```
+I then discovered one of my contracts (taken from this huge [tutorial](https://www.youtube.com/watch?v=GKJBEEXUha0)) was vulnerable.
+I described the vulnerability I've found in this thread 👇
+<StaticTweet id="1573638900660191232" />
 
-# This is a h1 tag
+## CTFs
 
-## This is a h2 tag
+I then went to challenge myself to some CTFs to evaluate my current understanding of Solidity: [The Ethernaut](https://ethernaut.openzeppelin.com/) & [Damn Vulnerable Defi](https://www.damnvulnerabledefi.xyz/) which I highly recommend.
 
-#### This is a h4 tag
+I am halfway through these challenges, and I can [solve](https://www.github.com/shinpooo) most of them so I think I can finish them by the end of next week.
 
-## Emphasis
+Learned a lot through these CTFs and discovered many vulnerabilities I didn't know about, like the forced ether transfer when a smart contract `selfdestruct`.
 
-```
-_This text will be italic_
+I also learned how variables are packed in storage and how to access data even at a specific storage slot.
 
-**This text will be bold**
 
-_You **can** combine them_
-```
+## Code4rena 
 
-_This text will be italic_
+I discovered [code4rena](https://twitter.com/code4rena) & joined as a warden to take my hands on real audits. When I joined, [Art Gobblers](https://twitter.com/artgobblers) audit contest was running, so I spent some time just observing how auditors work, and which type of questions they ask the project owners. 
 
-**This text will be bold**
+## Trail of Bits
 
-_You **can** combine them_
+I've also been applying to [Trail of Bits apprencticeship](the-road-to-the-apprenticeship). That might be a little early, but it doesn't cost anything to try! Their application process is a bit funny as it requires you to complete a little challenge on a test network.
 
-## Lists
+## Blog
 
-### Unordered
+I also spent 1-2 days creating this blog, I wanted it to be fully customizable. It's built with Nextjs & MDX, so I don't have to write my posts in HTML but in MDX files which is much more convenient. 
 
-```
-- Item 1
-- Item 2
-  - Item 2a
-  - Item 2b
-```
+It is super powerful as MDX allows you to write MD files with react components. For example, the tweets embedded in this article are React components. <Boop rotation={3600} timing={1000}>Also I will be able to do useless things like that (hover me!)</Boop>
 
-- Item 1
-- Item 2
-  - Item 2a
-  - Item 2b
 
-### Ordered
 
-```
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
-```
 
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
+# Plan for the next report
 
-## Images
+## Plan
 
-```
-![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
-Format: ![Alt Text](url)
-```
+Things I have to do
+- Continue Ethernaut & DVD CTFs
+- Watch this [video](https://www.youtube.com/watch?v=QfFjUMPtsM0) 
 
-![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+Things I may (not) do
+- Read audits
+- Paradigm CTFs
+- Understand Uni V3 codebase deeply
+- Make my first audit contest at Code4rena
+- Write technical content for the blog
+- Improve the blog design
 
-## Links
+I like to not set large goals as I prefer exploring things when I discover them
 
-```
-http://github.com - automatic!
-[GitHub](http://github.com)
-```
 
-http://github.com - automatic!
-[GitHub](http://github.com)
+## Report format
 
-## Blockquotes
-
-```
-As Kanye West said:
-
-> We're living the future so
-> the present is our past.
-```
-
-As Kanye West said:
-
-> We're living the future so
-> the present is our past.
-
-## Inline code
-
-```
-I think you should use an
-`<addr>` element here instead.
-```
-
-I think you should use an
-`<addr>` element here instead.
-
-## Syntax highlighting
-
-Here’s an example of how you can use syntax highlighting with [GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/):
-
-````
-```js:fancyAlert.js
-function fancyAlert(arg) {
-  if (arg) {
-    $.facebox({ div: '#foo' })
-  }
-}
-```
-````
-
-And here's how it looks - nicely colored with styled code titles!
-
-```js:fancyAlert.js
-function fancyAlert(arg) {
-  if (arg) {
-    $.facebox({ div: '#foo' })
-  }
-}
-```
-
-## Footnotes
-
-```
-Here is a simple footnote[^1]. With some additional text after it.
-
-[^1]: My reference.
-```
-
-Here is a simple footnote[^1]. With some additional text after it.
-
-[^1]: My reference.
-
-## Task Lists
-
-```
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
-```
-
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
-
-## Tables
-
-You can create tables by assembling a list of words and dividing them with hyphens `-` (for the first row), and then separating each column with a pipe `|`:
-
-```
-| First Header                | Second Header                |
-| --------------------------- | ---------------------------- |
-| Content from cell 1         | Content from cell 2          |
-| Content in the first column | Content in the second column |
-```
-
-| First Header                | Second Header                |
-| --------------------------- | ---------------------------- |
-| Content from cell 1         | Content from cell 2          |
-| Content in the first column | Content in the second column |
-
-## Strikethrough
-
-Any word wrapped with two tildes (like `~~this~~`) will appear ~~crossed out~~.
+I'm still thinking about how I should write those reports. I don't want it to be a chore. So for now, I'm keeping it simple & just dumping what is currently on my mind. But I'll probably come up with a better format as I publish more & more reports
