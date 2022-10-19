@@ -4,7 +4,7 @@ function PostCard({ title, publishedOn, abstract, slug }) {
   return (
     <Link href="/[slug]" as={`/${slug}`}>
       
-    <div className="my-4 py-4 border-b">
+    <div className="my-4 py-4 border-b cursor-pointer">
       <h2 className="font-bold text-2xl my-4">{title}</h2>
       <time className="text-gray-400">{publishedOn}</time>
       <p className="mt-4 italic">{abstract}</p>
