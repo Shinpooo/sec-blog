@@ -5,7 +5,7 @@ export default function Home({ posts }) {
   return (
     <div>
       <h1 className="mt-24 mb-12 font-bold text-3xl">Latest Posts</h1>
-      {posts.reverse().map((post,id) => (
+      {posts.map((post,id) => (
         <PostCard key={id}
           title={post.data.title}
           publishedOn={post.data.publishedOn}
@@ -20,7 +20,7 @@ export default function Home({ posts }) {
 export const getStaticProps = () => {
   let posts = getPosts();
   posts = posts.filter(post => post.data.isPublished);
-
+  posts = posts.reverse()
   return {
     props: {
       posts,
